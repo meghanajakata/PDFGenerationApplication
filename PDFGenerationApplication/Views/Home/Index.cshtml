@@ -1,0 +1,18 @@
+﻿@model UserModel;
+
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = null;
+}
+
+
+<div>
+    <form asp-action="Generate">
+        <label>Enter the username</label>
+        <br />
+        <textarea asp-for="@Model.UserName"></textarea>
+        <span asp-validation-for="@Model.UserName"></span>
+        <br />
+        <button type="submit" value="Submit" >Download</button>
+    </form>
+</div>
